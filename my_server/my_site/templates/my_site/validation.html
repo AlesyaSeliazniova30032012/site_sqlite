@@ -1,0 +1,103 @@
+{% extends 'my_site/base.html' %}
+{% load static %}
+{% block title %}Регистрация/Вход{% endblock %}
+{% block content %}<div class="container_reg">
+    <div class="row title_row">
+        <h2>Получи востребованную IT профессию! Сделай шаг навстречу успешной карьере в IT сейчас!</h2>
+        <p>Поспеши!!! Осталось мало мест!!! Предложение ограничено!!! Зарегистрируйся и получи доступ к индивидуальному обучению прямо сейчас со скидкой в 50%!!!</p>
+    </div>
+</div>
+{% comment %} Переключаемая форма регистрации и валидации {% endcomment %}
+<div class="wrapper_validation">
+    <div class="container_validation">
+        <article class="container_article">
+            <div class="block">
+                <section class="block_item block-item">
+                    <h2 class="block-item_title"><b>У Вас есть аккаунт?</b></h2>
+                    <button class="block-item_btn signin-btn">Войти</button>
+                </section>
+                <section class="block_item block-item">
+                    <h2 class="block-item_title"><b>У Вас нет аккаунта?</b></h2>
+                    <button class="block-item_btn signup-btn">Зарегистрироваться</button>
+                </section>
+            </div>
+            <div class="form-box">
+                {% comment %} Форма входа {% endcomment %}
+                <form action="{% url 'home' %}" class="form-reg form_signin" method="post">
+                    <h3 class="form-reg_title">Вход</h3>
+                    <p>
+                        <input type="text" name="username" class="form-reg_input" id="login-signin" placeholder="Логин">
+                    </p>
+                    <p>
+                        <div class="password">
+                            <input type="password" name="password" class="form-reg_input formPass" id="password-input password-signin" placeholder="Пароль">
+                            <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+                        </div>
+                    </p>
+                    <p>
+                        <button type="submit" class="form-reg_btn form-reg_btn_signin">Войти</button>
+                    </p>
+                    {% comment %} Восстановление пароля здесь может быть
+                    <p>
+                        <a href="#" class="form-reg_forgot">Восстановить пароль</a>
+                    </p> {% endcomment %}
+                </form>
+                    {% comment %} Форма регистрации {% endcomment %}
+                <form action="{% url 'validation' %}" class="form-reg form_signup" method="post">
+                    <h3 class="form-reg_title">Регистрация</h3>
+                    <p>
+                        <input type="text" name="username" class="form-reg_input" id="login-signup" placeholder="Логин">
+                    </p>
+                    <p>
+                        <input type="email" name="email" class="form-reg_input" id="email-signup" placeholder="Email">
+                    </p>
+                    <p>
+                        <div class="password">
+                            <input type="password" name="password" class="form-reg_input formPass" id="password-input password-signup" placeholder="Пароль">
+                            <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+                        </div>
+                    </p>
+                    <p>
+                        <div class="password">
+                            <input type="password" name="passwordConfirmation" class="form-reg_input formPassConfirmation" id="password-input password-signup" placeholder="Подтвердите пароль">
+                            <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+                        </div>
+                    </p>
+                    <p>
+                        <button type="submit" class="form-reg_btn form-reg_btn_signup" id="form-reg_btn_signup">Зарегистрироваться</button>
+                    </p>
+                </form>
+            </div>
+        </article>
+    </div>
+</div>{% endblock %}
+{% comment %} Проверка формы регистрации - показать/скрыть пароль {% endcomment %}
+{% block script %}<script>
+    function show_hide_password(target){
+        let input = document.getElementById('password-input');
+        if (input.getAttribute('type') == 'password') {
+            target.classList.add('view');
+            input.setAttribute('type', 'text');
+        } else {
+            target.classList.remove('view');
+            input.setAttribute('type', 'password');
+        }
+        return false;
+    }
+</script>
+{% comment %} Переключение форм {% endcomment %}
+<script>
+    const signInBtn = document.querySelector('.signin-btn');
+    const signUpBtn = document.querySelector('.signup-btn');
+    const formBox = document.querySelector('.form-box');
+    const wrap = document.querySelector('.wrapper_validation');
+
+    signUpBtn.addEventListener('click', function() {
+        formBox.classList.add('active');
+        wrap.classList.add('active');
+    });
+    signInBtn.addEventListener('click', function() {
+        formBox.classList.remove('active');
+        wrap.classList.remove('active');
+    });
+</script> {% endblock %}

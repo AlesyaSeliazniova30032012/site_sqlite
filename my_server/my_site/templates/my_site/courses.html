@@ -1,0 +1,459 @@
+{% extends 'my_site/base.html' %}
+{% load static %}
+{% block title %}IT "OVERONE"{% endblock %}
+{% block content %}<section id="slogan">
+    <div class="container">
+        <div class="row title_row">
+            <h2>КУРСЫ от IT "OVERONE"</h2>
+            <p>Получи востребованную IT профессию прямо сейчас!</p>
+        </div>
+    </div>
+</section>
+<section id="courses">
+    <div class="row">
+        <ul class="nav nav-pills">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Выпадающий список</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Действие</a></li>
+                    <li><a class="dropdown-item" href="#">Другое действие</a></li>
+                    <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Выпадающий список</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Действие</a></li>
+                    <li><a class="dropdown-item" href="#">Другое действие</a></li>
+                    <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Выпадающий список</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Действие</a></li>
+                        <li><a class="dropdown-item" href="#">Другое действие</a></li>
+                        <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+                    </ul>
+              </li>
+        </ul>
+
+        <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item dropdown col-md-4" role="presentation">
+                <a class="nav-link dropdown-toggle active" id="pills-theway-tab" data-bs-toggle="dropdown" href="#pills-theway" role="button" aria-controls="pills-theway" aria-selected="true" aria-expanded="false"><b>THE WAY-обучение</b></a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Действие</a></li>
+                    <li><a class="dropdown-item" href="#">Другое действие</a></li>
+                    <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown col-md-4" role="presentation">
+                <a class="nav-link dropdown-toggle" id="pills-offline-tab" data-bs-toggle="dropdown" href="#pills-offline" role="button" aria-controls="pills-offline" aria-selected="false" aria-expanded="false"><b>OFFLINE-обучение</b></a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Действие</a></li>
+                    <li><a class="dropdown-item" href="#">Другое действие</a></li>
+                    <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown col-md-4" role="presentation">
+                <a class="nav-link dropdown-toggle" id="pills-online-tab" data-bs-toggle="dropdown" href="#pills-online" role="button" aria-controls="pills-online" aria-selected="false" aria-expanded="false"><b>ONLINE-обучение</b></a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Действие</a></li>
+                    <li><a class="dropdown-item" href="#">Другое действие</a></li>
+                    <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-theway-tab">...</div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-offline-tab">...</div>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-online-tab">...</div>
+        </div>
+
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade" id="pills-ita" role="tabpanel" aria-labelledby="pills-ita-tab">
+                <div class="row">
+                    <div class="col-md-6 text-content">
+                        <h3>THE WAY - индивидуальное обучение с опытным преподавателем, адаптированное под ваши цели.</h3>
+                        <p>
+                            Индивидуальное обучение:
+                            - в удобное время
+                            - в комфортном темпе
+                            - поддержка 24/7
+                        </p>
+                        <p>
+                            Резюме:
+                            - 2 CV файла (на русском и английском)
+                            - грамотное оформление Hard и Soft Skills
+                            + сопроводительное письмо
+                        </p>
+                        <p>
+                            Коммерческое портфолио:
+                            - готовый аккаунт на GitHub
+                            - реальные IT-проекты
+                        </p>
+                        <p>
+                            Оформленный Linkedin:
+                            - готовый аккаунт на Linkedin
+                            - контакты с HR-специалистами
+                        </p>
+                        <p>
+                            Помощь в трудоустройстве:
+                            - подбор IT-компаний
+                            - личное менторство до трудоустройства
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{% static 'my_site/image/courses/the_way.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{% static 'my_site/image/courses/the_way1.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-content">
+                        <h3>THE WAY PYTHON</h3>
+                        <p>
+                            На курсе вы научитесь:
+                            1. Изучите экосистемы Python и фундаментальные принципы программирования.
+                            2. Разберетесь в процедурном и объектно-ориентированном программировании.
+                            3. Разработаете web-приложение на Django.
+                            4. Научитесь работать с файлами и базами данных.
+                            5. Создадите 2 коммерческих проекта, дополните ими свое портфолио и получите сертификат о прохождении курса.
+                            6. При поддержке HR-специалиста начнете проходить собеседования, наберетесь опыта и научитесь уверенно рассказывать о себе работодателю.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{% static 'my_site/image/courses/the_way2.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-content">
+                        <h3>THE WAY ENGLISH - современная образовательная программа с личным преподавателем, которая включает в себя два основных блока:</h3>
+                        <p>Индивидуальное обучение английскому с опытным преподавателем, адаптированное под ваши цели.</p>
+                        <p>
+                            1. Общий курс:
+                            - разговорный,
+                            - письменный,
+                            - грамматика,
+                            - лексика. 
+                        </p>
+                        <p>
+                            2. Профессионально-ориентированный курс:
+                            - технический английский,
+                            - IT-лексика.
+                        </p>
+                        <p>Индивидуальная программа, цель которой — увеличить ваш словарный запас до желаемого уровня, помочь преодолеть языковой барьер и достичь поставленных целей.Методика обученияЗанимайтесь по индивидуальной программе из любой точки мира, в удобное время и в комфортном для вас темпе.</p>
+                        <p>Преподаватели с опытом 5+ лет, которые знают своё дело: проследят за вашим прогрессом и скорректируют план обучения.</p>
+                        <p>Мы позаботимся, чтобы при всей занятости у вас нашлось время на английский и не оставим вас один на один с трудностями.</p>
+                        <p>Индивидуальная программа, цель которой — увеличить ваш словарный запас до желаемого уровня, помочь преодолеть языковой барьер и достичь поставленных целей.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{% static 'my_site/image/courses/the_way3.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-content">
+                        <h3>THE WAY FRONTEND</h3>
+                        <p>
+                            На курсе вы :
+                            1. Изучите Frontend и язык программирования JavaScript с нуля.
+                            2. Обучитесь верстке и напишете свое первое приложение.
+                            3. Узнаете основы клиент-серверного взаимодействия, вёрстку на HTML и CSS.
+                            4. Научитесь писать качественный, чистый код и получите практические навыки работы с GIT.
+                            5. Создадите 2 коммерческих проекта, дополните ими своё портфолио.
+                            6. Получите сертификат об успешном прохождении курса.
+                        </p>
+                        <p>Тебя ждет 25 контентных модулей. Сложность увеличивается по мере прохождения. Проходишь курс в удобном тебе темпе с подробной обратной связью от преподавателя.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{% static 'my_site/image/courses/the_way4.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-content">
+                        <h3>THE WAY UI/UX</h3>
+                        <p>
+                            На курсе вы научитесь :
+                            1. Проектировать и создавать пользовательские интерфейсы.
+                            2. Свободно работать с сетками, кривыми, слоями, градиентами и сложными заливками.
+                        </p>
+                        <p>Тебя ждет 5 насыщенных контентных модулей. Сложность растет по мере прохождения. Проходишь курс в удобном тебе темпе с подробной обратной связью от преподавателя.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{% static 'my_site/image/courses/the_way5.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-content">
+                        <h3>THE WAY JAVA</h3>
+                        <p>
+                            На курсе вы :
+                            1. Изучите основы Java, синтаксис и область применения.  
+                            2. Разберетесь в ООП и сможете написать интересные адгоритмы.
+                            3. Освоите шаблоны проектирования и самые популярные фреймворки - Spring и Hibernate.
+                            4. Узнаете основы клиент-серверного взаимодействия, вёрстку на HTML и CSS, освоите работу с базами данных и SQL.
+                            5. Поработаете с коллекциями, файлами и базами данных.
+                            6. Создадите 2 коммерческих проекта для своего портфолио и получите сертификат о прохождении курса.
+                        </p>
+                        <p>Тебя ждет 27 контентных модулей. Сложность увеличивается по мере прохождения. Проходишь курс в удобном тебе темпе с подробной обратной связью от преподавателя.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-ito" role="tabpanel" aria-labelledby="pills-ito-tab">
+                <div class="row">
+                    <div class="col-md-6 text-content">
+                        <h3>OFFLINE-обучение</h3>
+                        <p>Максимум практики. Курсы Python с нуля Overone построены так, чтобы студенты научились решать реальные задачи и приобрели навыки создания удобных и эффективных интерфейсов.</p>
+                        <p>Теоретические основы. Нет ничего практичнее хорошей теории! Разбираем основные понятия в начале уроков и закрепляем полученные знания дома.</p>
+                        <p>Домашние задания. Педагоги дают вам материалы, для закрепления знаний полученных на уроках. Под их контролем вы будете выполнять интересные задания, и повышать свой скилл.</p>
+                        <p>Небольшие группы. В группах до 10-14 человек преподаватель может уделить достаточно времени каждому.</p>
+                        <p>Сертификат. После прохождения курсов Python, вы получаете сертификат, который укажите в резюме и предъявить на собеседовании. Сертификат IT OVERONE увеличивает шанс получения офера в 3 раза!</p>
+                        <p>Сопровождение специалистов. Не только ваш педагог будет с вами на связи - вы получите консультации от HR специалистов и полное оформление необходимой рабочей документации (резюме, портфолио, LinkedIn).</p>
+                        <p>Поддержка 24/7! Вы можете попросить совета у преподавателей, кураторов в любое другое время, даже когда учебный курс окончен.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{% static 'my_site/image/courses/offline.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{% static 'my_site/image/courses/offline1.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-content">
+                        <h3>PYTHON OFFLINE</h3>
+                        <p>
+                            На курсе вы научитесь:
+                            1. Изучите экосистемы Python и пользовательские интерфейсы.
+                            2. Разберетесь в процедурном и объектно-ориентированном программировании.
+                            3. Разработаете web-приложение на Django.
+                            4. Научитесь работать с файлами и базами данных.
+                            5. Создадите 3 коммерческих проекта, дополните ими свое портфолио и получите сертификат о прохождении курса.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        img src="{% static 'my_site/image/offline2.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-content">
+                        <h3>JAVA OFFLINE</h3>
+                        <p>
+                            На курсе вы :
+                            1. Изучите основы Java, синтаксис и область применения.  
+                            2. Разберетесь в ООП и сможете написать интересные алгоритмы.
+                            3. Освоите шаблоны проектирования и самые популярные фреймворки - Spring и Hibernate.
+                            4. Узнаете основы клиент-серверного взаимодействия, вёрстку на HTML и CSS, освоите работу с базами данных и SQL.
+                            5. Поработаете с коллекциями, файлами и базами данных.
+                            6. Создадите 2 коммерческих проекта, дополните ими свое портфолио и получите сертификат о прохождении курса.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{% static 'my_site/image/courses/offline3.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-content">
+                        <h3>UX/UI OFFLINE</h3>
+                        <p>
+                            На курсе вы научитесь:
+                            1. Проектировать и создавать пользовательские интерфейсы.
+                            2. Свободно работать с сетками, кривыми, слоями, градиентами и сложными заливками.
+                            3. Создавать и рисовать баннеры, логотипы и другие элементы фирменного стиля.
+                            4. Работать с Figma, Adobe Photoshop, Adobe Illustrator, InVision, Tilda.
+                            5. Разрабатывать навигации по сайту или веб-странице.
+                            6. Составлять инструкции по шрифтам, цветам и размерам.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{% static 'my_site/image/courses/offline4.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-content">
+                        <h3>FRONTEND OFFLINE</h3>
+                        <p>
+                            На курсе вы :
+                            1. Изучите Frontend и язык программирования JavaScript с нуля.
+                            2. Обучитесь верстке, а также напишете свое первое приложение.
+                            3. Изучите основы клиент-серверного взаимодействия, верстку на HTML и CSS.
+                            4. Научитесь писать качественный, чистый код и получите практические навыки работы с GIT.
+                            5. Создадите 2 коммерческих проекта, дополните ими свое портфолио и получите сертификат о прохождении курса.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-ucs" role="tabpanel" aria-labelledby="pills-ucs-tab">
+                <div class="row">
+                    <div class="col-md-6 text-content">
+                        <h3>ONLINE-обучение</h3>
+                        <p>Максимум практики. Курсы Python с нуля Overone построены так, чтобы студенты научились решать реальные задачи и приобрели навыки создания удобных и эффективных интерфейсов.</p>
+                        <p>Теоретические основы. Нет ничего практичнее хорошей теории! Разбираем основные понятия в начале уроков и закрепляем полученные знания дома.</p>
+                        <p>Домашние задания. Педагоги дают вам материалы, для закрепления знаний полученных на уроках. Под их контролем вы будете выполнять интересные задания, и повышать свой скилл.</p>
+                        <p>Небольшие группы. В группах до 10-14 человек преподаватель может уделить достаточно времени каждому.</p>
+                        <p>Сертификат. После прохождения курсов Python, вы получаете сертификат, который укажите в резюме и предъявить на собеседовании. Сертификат IT OVERONE увеличивает шанс получения офера в 3 раза!</p>
+                        <p>Сопровождение специалистов. Не только ваш педагог будет с вами на связи - вы получите консультации от HR специалистов и полное оформление необходимой рабочей документации (резюме, портфолио, LinkedIn).</p>
+                        <p>Поддержка 24/7! Вы можете попросить совета у преподавателей, кураторов в любое другое время, даже когда учебный курс окончен.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{% static 'my_site/image/courses/online.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{% static 'my_site/image/courses/online1.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-content">
+                        <h3>PYTHON ONLINE</h3>
+                        <p>
+                            На курсе вы научитесь:
+                            1. Изучите экосистемы Python и пользовательские интерфейсы.
+                            2. Разберетесь в процедурном и объектно-ориентированном программировании.
+                            3. Разработаете web-приложение на Django.
+                            4. Научитесь работать с файлами и базами данных.
+                            5. Создадите 3 коммерческих проекта, дополните ими свое портфолио и получите сертификат о прохождении курса.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{% static 'my_site/image/courses/online2.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-content">
+                        <h3>JAVA ONLINE</h3>
+                        <p>
+                            На курсе вы :
+                            1. Изучите основы Java, синтаксис и область применения.  
+                            2. Разберетесь в ООП и сможете написать интересные алгоритмы.
+                            3. Освоите шаблоны проектирования и самые популярные фреймворки - Spring и Hibernate.
+                            4. Узнаете основы клиент-серверного взаимодействия, вёрстку на HTML и CSS, освоите работу с базами данных и SQL.
+                            5. Поработаете с коллекциями, файлами и базами данных.
+                            6. Создадите 2 коммерческих проекта, дополните ими свое портфолио и получите сертификат о прохождении курса.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{% static 'my_site/image/courses/online3.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-content">
+                        <h3>UX/UI ONLINE</h3>
+                        <p>
+                            На курсе вы научитесь:
+                            1. Проектировать и создавать пользовательские интерфейсы.
+                            2. Свободно работать с сетками, кривыми, слоями, градиентами и сложными заливками.
+                            3. Создавать и рисовать баннеры, логотипы и другие элементы фирменного стиля.
+                            4. Работать с Figma, Adobe Photoshop, Adobe Illustrator, InVision, Tilda.
+                            5. Разрабатывать навигации по сайту или веб-странице.
+                            6. Составлять инструкции по шрифтам, цветам и размерам.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{% static 'my_site/image/courses/online4.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-content">
+                        <h3>FRONTEND ONLINE</h3>
+                        <p>
+                            На курсе вы :
+                            1. Изучите Frontend и язык программирования JavaScript с нуля.
+                            2. Обучитесь верстке, а также напишете свое первое приложение.
+                            3. Изучите основы клиент-серверного взаимодействия, верстку на HTML и CSS.
+                            4. Научитесь писать качественный, чистый код и получите практические навыки работы с GIT.
+                            5. Создадите 2 коммерческих проекта, дополните ими свое портфолио и получите сертификат о прохождении курса.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container_spoiler">
+        <div class="row title_row">
+            <p class="spoiler_title"><b>Что нужно знать про обучение</b></p>
+        </div>
+    </div>
+    <div class="wrapper_spoiler">
+        <div class="block_spoiler">
+            <div class="block_spoiler_item">
+                <input class="block_input" type="checkbox" id="block_spoiler_1">
+                <label class="block_spoiler_title" for="block_spoiler_1">Сколько длится обучение в нашей IT-школе?</label>
+                <div class="block_spoiler_text">
+                    Python
+                    4 месяца
+                    Python – лучший язык для обучения с нуля. Понятный синтаксис, скоростная разработка, востребованность и высокая зарплата – ингредиенты лёгкого старта IT-карьеры!
+
+                    Java
+                    6 месяцев
+                    Java – один из самых высокооплачиваемых языков. С помощью Java можно создать что угодно: от компьютерных игр и мобильных приложений под Android до ПО для банковских систем и облачных хранилищ данных.
+
+                    Frontend
+                    4 месяца
+                    Фронтендер заниматься оформлением внешней части сайтов и приложений. Он переводит макеты от дизайнеров в код так, чтобы всё в программном продукте было комфортным для использования пользователем.
+
+                    Веб-дизайн
+                    4 месяца
+                    UI/UX-дизайнер проектирует пользовательские интерфейсы. Он не просто делает красиво, а изучает интересы целевой аудитории. Хороший UI/UX-дизайн заставляет пользователей оставаться на сайте или в приложении как можно дольше, тем самым увеличивает конверсию в разы.
+                </div>
+            </div>
+            <div class="block_spoiler_item">
+                <input class="block_input" type="checkbox" id="block_spoiler_2">
+                <label class="block_spoiler_title" for="block_spoiler_2">В каком формате проходит обучение?</label>
+                <div class="block_spoiler_text">
+                    Мы предлагаем обучение в 3 форматах:
+                    оффлайн занятия в комфортных кабинетах – чай, кофе, снеки, группы до 15 человек, прямой контакт с преподавателем;
+                    онлайн уроки – общение с ментором в реальном времени прямо из Вашего дома;
+                    индивидуальное обучение – идеальная возможность учиться в любое время, в любом месте и в любом темпе.
+                </div>
+            </div>
+            <div class="block_spoiler_item">
+                <input class="block_input" type="checkbox" id="block_spoiler_3">
+                <label class="block_spoiler_title" for="block_spoiler_3">Как мы помогаем с трудоустройством?</label>
+                <div class="block_spoiler_text">
+                    Как лучшая школа айти мы предлагаем обучение от опытного HR-специалиста, который делится секретами для старта карьеры в IT и проводит тренировочные собеседования. Мы помогаем составить резюме, портфолио и сопроводительное письмо, которое покорит сердце любого рекрутера. Выпускники курсов программирования с нуля также могут стажироваться в наших компаниях-партнёрах.
+                </div>
+            </div>
+            <div class="block_spoiler_item">
+                <input class="block_input" type="checkbox" id="block_spoiler_4">
+                <label class="block_spoiler_title" for="block_spoiler_4">Как подобрать курс?</label>
+                <div class="block_spoiler_text">
+                    Первое бесплатное занятие по IT – Ваш шанс узнать всё о мире современных айтишников, изучить наиболее востребованные направления и получить консультацию по поводу Вашего карьерного развития с нуля.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>{% endblock %}

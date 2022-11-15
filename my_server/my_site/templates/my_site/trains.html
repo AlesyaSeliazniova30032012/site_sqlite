@@ -1,0 +1,144 @@
+{% extends 'my_site/base.html' %}
+{% load static %}
+{% block title %}IT "OVERONE"{% endblock %}
+{% block content %}
+{% comment %} Курс молодого разработчика {% endcomment %}
+<section id="courses">
+    <div class="row title_row">
+        <h2>Специально для наших студентов | КУРС МОЛОДОГО РАЗРАБОТЧИКА от IT "OVERONE"</h2>
+        <p>Вы в 2 раза быстрее вольетесь в сферу IT и обучение пойдет намного проще!</p>
+    </div>
+    <div class="row">
+        <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="pills-tms-tab" data-toggle="pill" href="#pills-tms" role="tab" aria-controls="pills-tms" aria-selected="true">Тренинг "IT Start"</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-ita-tab" data-toggle="pill" href="#pills-ita" role="tab" aria-controls="pills-ita" aria-selected="false">Hackathon</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-ito-tab" data-toggle="pill" href="#pills-ito" role="tab" aria-controls="pills-ito" aria-selected="false">Интенсив "IT Drive"</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-ucs-tab" data-toggle="pill" href="#pills-ucs" role="tab" aria-controls="pills-ucs" aria-selected="false">Настройка ПК</a>
+            </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-tms" role="tabpanel" aria-labelledby="pills-tms-tab">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="#"><img src="{% static 'my_site/image/trains/train1.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 text-content">
+                            <h3>
+                                IT START
+                            </h3>
+                            <p>
+                                За 2 часа сделаете 10 ключевых действий и найдете работу в IT за месяц!
+                            </p>
+                            <p>
+                                IT Start - это тот самый волшебный пендаль, которого Вам не хватает, чтобы уже через неделю пройти минимум 6 собеседований и получить свой первый оффер.
+                            </p>
+                            <p>
+                                Что будет на тренинге:
+                                <ul>
+                                    <li>Узнаете как поменять Ваше резюме, чтобы покорить сердце любого рекрутера.</li>
+                                    <li>Прямо на тренинге получите 10 четких действий для трудоустройства в IT и начнете их выполнять.</li>
+                                    <li>Проработаете все свои страхи, зажимы, сомнения и ошибки при трудоустройстве.</li>
+                                    <li>Пройдете реальное собеседование в IT-компанию и узнаете свои ошибки при трудоустройстве.</li>
+                                    <li>Получите огромный заряд мотивации для достижений в IT и окунетесь в атмосферу сильных единомышленников.</li>
+                                </ul>
+                            </p>
+                            <p>
+                                Ваш результат:
+                                <ul>
+                                    <li>Составите план как Вам получить лучший оффер из существующих на рынке прямо сейчас.</li>
+                                    <li>Узнаете как Вам поменять социальные сети, чтобы показать свой профессионализм.</li>
+                                    <li>Четко поймете какие Soft и Hard Skills Вам нужно развивать на данный момент.</li>
+                                    <li>Получите железобетонную дозу мотивации и волшебный пендаль под зад и с вероятностью 99% быстро найдете работу в IT.</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-ita" role="tabpanel" aria-labelledby="pills-ita-tab">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="#"><img src="{% static 'my_site/image/trains/train3.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 text-content">
+                            <h3>
+                                Что такое хакатон?
+                            </h3>
+                            <p>
+                                Это соревнование для разработчиков, где команды решают задачи по программированию. Вы опробуете навыки, которые приобрели по ходу курса в условиях реальной разработки.
+                                Многие известные компании начали свой путь в IT именно на хакатоне. На хактонах появились такие компании как GroupMe, Appetas и EasyTaxi.
+                            </p>
+                            <p>
+                                Цель хакатона — не победа, а обучение.
+                                Поэтому выигрывает здесь не только победитель.
+                            </p>
+                            <p>
+                                <ul>
+                                    <li>Как проходит хакатон. Лучше посмотрите сами как проходит наш Хакатон.</li>
+                                    <li>Мы заранее объявляем тему хакатона.Вы делитесь на команды и на придумываете свои продукты на нашу тему.</li>
+                                    <li>Это может быть приложение, сервис и т.д.</li>
+                                    <li>А дальше Вас ждет 12 часов плотного кодинга. </li>
+                                    <li>Цель - создать работающий прототип Вашего продукта.</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-ito" role="tabpanel" aria-labelledby="pills-ito-tab">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="#"><img src="{% static 'my_site/image/trains/train2.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 text-content">
+                            <p>
+                                По техническим причинам данная информация недоступна!!!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-ucs" role="tabpanel" aria-labelledby="pills-ucs-tab">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="#"><img src="{% static 'my_site/image/trains/train4.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 text-content">
+                            <h3>
+                                Настройка ПК
+                            </h3>
+                            <p>
+                                За 3 часа мы полностью подготовим любой компьютер для комфортной работы!
+                            </p>
+                            <p>
+                                Полностью удаленная настройка.
+                                Все что нужно от Вас - установить программу по удаленному доступу.
+                            </p>
+                            <p>
+                                Мы поможем:
+                                <ul>
+                                    <li>установить пакет Microsoft Office — ПО для работы с текстами, таблицами, базами данных</li>
+                                    <li>переустановить Windows для ускорения компьютера и доступа к последним обновлениям</li>
+                                    <li>настроить ПК и оптимизировать его работу</li>
+                                    <li>подобрать подходящий пакет услуг под Ваши нужды</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+{% endblock %}

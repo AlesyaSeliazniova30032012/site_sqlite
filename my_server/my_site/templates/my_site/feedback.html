@@ -1,0 +1,71 @@
+{% extends 'my_site/base.html' %}
+{% load static %}
+{% block title %}Бесплатное занятие{% endblock %}
+{% block content %}<section id="slogan">
+    <div class="container">
+        <div class="row title_row">
+            <h2>Получи востребованную IT профессию</h2>
+            <p>Сделай шаг навстречу успешной карьере в IT сейчас!</p>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="wrapper_form">
+        <div class="form">
+            <form action="{% url 'home' %}" id="form" class="form_body" method="post">
+                <h1 class="form_title">Записаться на бесплатное занятие:</h1>
+                <div class="form-item">
+                    <label for="formName" class="form_label">Имя*</label>
+                    <input id="formName" type="text" name="name" class="form_input _req">
+                </div>
+                <div class="form-item">
+                    <label for="formEmail" class="form_label">E-mail*</label>
+                    <input id="formEmail" type="text" name="email" class="form_input _req _email">
+                </div>
+                <div class="form-item">
+                    <div class="form_label">Пол</div>
+                    <div class="options">
+                        <div class="options_item">
+                            <input id="formMan" checked type="radio" value="man" name="gender" class="options_input">
+                            <label for="formMan" class="options_label"><span>мужской</span></label>
+                        </div>
+                        <div class="options_item">
+                            <input id="formWoman" type="radio" value="woman" name="gender" class="options_input">
+                            <label for="formWoman" class="options_label"><span>женский</span></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label for="formAge" class="form_label">Возраст:</label>
+                    <input id="formAge" type="text" name="age" class="form_input">
+                </div>
+                <!--Разобраться с маской ввода!!!!!!!!!!!!!!!!!!!-->
+                <div class="form-item">
+                    <label for="formTel" class="form_label">Телефон для связи:</label>
+                    <input id="formTel" type="text" name="tel" class="form_input _tel">
+                </div>
+                <div class="form-item">
+                    <label for="formMessage" class="form_label">Сообщение:</label>
+                    <textarea name="message" id="formMessage" class="form_input"></textarea>
+                </div>
+                <div class="form-item">
+                    <div class="form_label">Прикрепить скрин понравившегося курса</div>
+                    <div class="file">
+                        <div class="file_item">
+                            <input id="formImage" accept=".jpg, .png, .gif" type="file" name="image" class="file_input">
+                            <div class="file_button">Выбрать</div>
+                        </div>
+                        <div id="formPreview" class="file_preview"></div>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="checkbox">
+                        <input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox_input _req">
+                        <label for="formAgreement" class="checkbox_label"><span>Я даю согласие на оработку персональных данных</span></label>
+                    </div>
+                </div>
+                <button type="submit" class="form_button">Отправить</button>
+            </form>
+        </div>
+    </div>
+</section>{% endblock %}

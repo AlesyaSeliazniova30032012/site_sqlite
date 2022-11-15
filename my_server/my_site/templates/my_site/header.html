@@ -1,0 +1,60 @@
+{% load static %}
+{% comment %} Блок контактной информации {% endcomment %}
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="tel:+375333333093"><i class="fa fa-mobile" aria-hidden="true"></i>+375(33)333-30-93</a><br>
+                <a href="tel:+375333333193"><i class="fa fa-mobile" aria-hidden="true"></i>+375(33)333-31-93</a>
+            </div>
+            {% comment %} Блок соц. сетей с возможностью перехода на их страницы {% endcomment %}
+            <div class="col-md-4">
+                <p>
+                    <a href="https://web.telegram.org/z/" target="_blank"><i class="fa fa-telegram" aria-hidden="true" title="telegram"></i></a>
+                    <a href="https://ru-ru.facebook.com/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true" title="facebook"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true" title="instagram"></i></a>
+                    <a href="https://vk.com/" target="_blank"><i class="fa fa-vk" aria-hidden="true" title="vkontakte"></i></a>
+                    <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true" title="youtube"></i></a>
+                    <a href="https://www.whatsapp.com/" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true" title="whatsapp"></i></a>
+                </p>
+            </div>
+            {% comment %} Блок поиска {% endcomment %}
+            <div class="col-md-4">
+                <nav class="navbar" style="background: rgb(64, 75, 157);">
+                    <div class="container-fluid">
+                      <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="поиск" aria-label="поиск" style="border-radius: 0px;">
+                        <button class="btn btn-outline-success" type="submit" style="margin-left: 10px;">поиск</button>
+                      </form>
+                    </div>
+                  </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<nav>
+    <div class="container">
+        <div class="row">
+            {% comment %} Блок логотипа {% endcomment %}
+            <div class="col-md-3">
+                <a href="{% url 'home' %}" class="header_logo">
+                    <img src="{% static 'my_site/image/label.png' %}" alt="">
+                </a>
+            </div>
+            {% comment %} Меню навигации по сайту в адаптиве под бургер-меню {% endcomment %}
+            <div class="col-md-9">
+                <div class="header_burger">
+                    <span></span>
+                </div>
+                <div class="header_menu">
+                    <ul class="header_list">
+                        <a href="{% url 'courses' %}" class="header_link" style="margin-left: 50px;"><li><b>Курсы</b></li></a>
+                        <a href="{% url 'trains' %}" class="header_link"><li><b>КМР</b></li></a>
+                        <a href="{% url 'validation' %}" class="header_link"><li><b>Регистрация/Вход</b></li></a>
+                        <a href="{% url 'feedback' %}" class="header_link link_free" style="margin-left: 50px;"><li><b>Бесплатное занятие</b></li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

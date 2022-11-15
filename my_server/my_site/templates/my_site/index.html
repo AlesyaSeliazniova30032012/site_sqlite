@@ -1,0 +1,768 @@
+{% extends 'my_site/base.html' %}
+{% load static %}
+{% block title %}IT "OVERONE"{% endblock %}
+{% block content %}<section id="slogan">
+    <div class="container">
+        <div class="row title_row">
+            <h2>"OVERONE" - IT-компания,</h2>
+            <p>деятельность которой направлена на разработку программного обеспечения, сайтов и автоматизацию бизнес-процессов, а также обучение квалифицированных IT специалистов.</p>
+        </div>
+    </div>
+    <p class="slogan-img"><img src="{% static 'my_site/image/main_free.png' %}" alt="">
+        <a href="{% url 'feedback' %}"></a><button class="free_btn" onclick="show('block')">Бесплатное занятие</button></a>
+        <div id="font_gray" onclick="show('none')"></div>
+    </p>
+    <div id="wrapper_form_invisible">
+        <button type="button" class="btn-close" aria-label="Закрыть" onclick="show('none')"></button>
+        <div class="form">
+            <form action="{% url 'home' %}" id="form" class="form_body" method="post">
+                <h1 class="form_title">Получить бесплатную консультацию:</h1>
+                <div class="form-item">
+                    <label for="formName" class="form_label">Имя*</label>
+                    <input id="formName" type="text" name="name" class="form_input _req">
+                </div>
+                <div class="form-item">
+                    <label for="formEmail" class="form_label">E-mail*</label>
+                    <input id="formEmail" type="text" name="email" class="form_input _req _email">
+                </div>
+                <div class="form-item">
+                    <div class="form_label">Пол</div>
+                    <div class="options">
+                        <div class="options_item">
+                            <input id="formMan" checked type="radio" value="man" name="gender" class="options_input">
+                            <label for="formMan" class="options_label"><span>мужской</span></label>
+                        </div>
+                        <div class="options_item">
+                            <input id="formWoman" type="radio" value="woman" name="gender" class="options_input">
+                            <label for="formWoman" class="options_label"><span>женский</span></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label for="formAge" class="form_label">Возраст:</label>
+                    <input id="formAge" type="text" name="age" class="form_input">
+                </div>
+                <!--Разобраться с маской ввода!!!!!!!!!!!!!!!!!!!-->
+                <div class="form-item">
+                    <label for="formTel" class="form_label">Телефон для связи:</label>
+                    <input id="formTel" type="text" name="tel" class="form_input _tel">
+                </div>
+                <div class="form-item">
+                    <label for="formMessage" class="form_label">Сообщение:</label>
+                    <textarea name="message" id="formMessage" class="form_input"></textarea>
+                </div>
+                <div class="form-item">
+                    <div class="form_label">Прикрепить скрин понравившегося курса</div>
+                    <div class="file">
+                        <div class="file_item">
+                            <input id="formImage" accept=".jpg, .png, .gif" type="file" name="image" class="file_input">
+                            <div class="file_button">Выбрать</div>
+                        </div>
+                        <div id="formPreview" class="file_preview"></div>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="checkbox">
+                        <input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox_input _req">
+                        <label for="formAgreement" class="checkbox_label"><span>Я даю согласие на обработку персональных данных</span></label>
+                    </div>
+                </div>
+                <button type="submit" class="form_button">Отправить</button>
+            </form>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container_choice">
+        <div class="row title_row">
+            <h2>Почему выбирают "OVERONE"</h2>
+        </div>
+    </div>
+    <div>
+        <section id="container_fade">
+            <div class="container_fadeBlock">
+                <div class="fadeBlock1 wow animate__animated animate__fadeInLeft">
+                    <h2 class="fade_title_h2"><b>1000+ выпускников</b></h2>
+                    <div class="fade_text">Курсы программирования в IT OVERONE закончили уже больше 1000 человек!</div>
+                </div>
+                <div class="fadeBlock2 wow animate__animated animate__fadeInRight">
+                    <h3 class="fade_title_h3"><b>75% выпускников трудоустроились в IT</b></h3>
+                    <div class="fade_text">IT-курсы OVERONE дают максимум практических навыков для быстрого входа в IT.</div>
+                </div>
+            </div>
+        </section>
+        <section id="container_fade">
+            <div class="container_fadeBlock">
+                <div class="fadeBlock3 wow animate__animated animate__fadeInLeft">
+                    <h3 class="fade_title_h3"><b>Ведем студентов до трудоустройства</b></h3>
+                    <div class="fade_text">Мы трудоустраиваем наших студентов к нам в компанию. Начни свой путь разработчика вместе с нами!</div>
+                </div>
+                <div class="fadeBlock4 wow animate__animated animate__fadeInRight">
+                    <h2 class="fade_title_h2"><b>Легко совмещать с работой</b></h2>
+                    <div class="fade_text">Совмещай курсы с основной работой или учебой, выбирай группу для обучения в удобное время.</div>
+                </div>
+            </div>
+        </section>
+        <section id="container_fade">
+            <div class="container_fadeBlock">
+                <div class="fadeBlock5 wow animate__animated animate__fadeInLeft">
+                    <h2 class="fade_title_h2"><b>Партнеры — топовые IT-компании</b></h2>
+                    <div class="fade_text">Наших студентов трудоустраиваем в IT-компании партнеры! Получи оффер прямо на выпускном!</div>
+                </div>
+                <div class="fadeBlock6 wow animate__animated animate__fadeInRight">
+                    <h3 class="fade_title_h3"><b>Курсы ведут действующие IT-специалисты</b></h3>
+                    <div class="fade_text">Все преподаватели курсов программирования в Минске «с нуля» — действующие IT-эксперты с многолетним опытом.</div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+<section id="slider">
+    <div class="container_choice">
+        <div class="row title_row">
+            <h2>Как построено обучение:</h2>
+        </div>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="{% static 'my_site/image/benefits/benefit1.png' %}" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="{% static 'my_site/image/benefits/benefit2.png' %}" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="{% static 'my_site/image/benefits/benefit3.png' %}" alt="Slide 3">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="{% static 'my_site/image/benefits/benefit4.png' %}" alt="Slide 4">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="{% static 'my_site/image/benefits/benefit5.png' %}" alt="Slide 5">
+            </div>
+        </div> 
+    </div>
+</section>
+<section id="slogan">
+    <div class="container">
+        <div class="row title_row">
+            <p>Поспеши!!! Осталось мало мест!!! Предложение ограничено!!! Зарегистрируйся и получи доступ к индивидуальному обучению прямо сейчас со скидкой в 50%!!!</p>
+        </div>
+    </div>
+    <p class="slogan-img_free"><img src="{% static 'my_site/image/free.png' %}" alt="">
+        <a href="{% url 'validation' %}"><button class="free_btn free_free"><b>ЗАПИСАТЬСЯ</b></button></a>
+    </p>
+</section>
+<section id="partners">
+    <div class="container_partners">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="partner_title_h2"><b>Мы трудоустраиваем наших студентов не только в нашу компанию, но и в компании-партнеры!</b></h2>
+                <div class="partner_text">Мы составим каждому студенту грамотное резюме, подготовим портфолио и оформим аккаунты в GitHub и LinkedIn. После обучения — каждый студент будет во-первых, квалифицированным специалистом, а во-вторых, специалистом, который знает, как грамотно продать себя, что предложить компании и в чём его ценность для работодателя.</div>
+            </div>
+            <div class="col-md-6">
+                <a href="#"><img class="partner_img" src="{% static 'my_site/image/partners.png' %}" alt=""></a>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="teachers">
+    <div class="container_teachers">
+        <div class="row title_row">
+            <h2 class="teacher_title"><b>Наши преподаватели</b></h2>
+            <p>- это топовые IT-разработчики с БОЛЬШИМ опытом коммерческой разработки!</p>
+        </div>
+    </div>
+    {% comment %} <div class="container text-center my-3">
+        <div id="carouselExampleControls" class="carousel2" data-bs-ride="carousel">
+            <div class="carousel-inner2">
+                <div class="carousel-item2 active">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'my_site/image/teachers/teacher1.png' %}" class="d-block w-100" alt=""> 
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">АРТУР</h5>
+                            <p class="card-text">Преподаватель по Python<br>
+                                опыт коммерческой разработки 3+ лет</p>
+                            <a href="#" class="btn btn-primary">telegram-online</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item2">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'my_site/image/teachers/teacher2.png' %}" class="d-block w-100" alt=""> 
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">ДЕНИС</h5>
+                            <p class="card-text">Преподаватель по Python<br>
+                                опыт коммерческой разработки 3+ лет</p>
+                            <a href="#" class="btn btn-primary">telegram-online</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item2">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'my_site/image/teachers/teacher3.png' %}" class="d-block w-100" alt=""> 
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">ЕВГЕНИЙ</h5>
+                            <p class="card-text">Преподаватель по Python<br>
+                                опыт коммерческой разработки 8+ лет</p>
+                            <a href="#" class="btn btn-primary">telegram-online</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item2">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'my_site/image/teachers/teacher4.png' %}" class="d-block w-100" alt=""> 
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">ВЛАДИСЛАВ</h5>
+                            <p class="card-text">Преподаватель по Python<br>
+                                опыт коммерческой разработки 4+ лет</p>
+                            <a href="#" class="btn btn-primary">telegram-online</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item2">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'my_site/image/teachers/teacher5.png' %}" class="d-block w-100" alt=""> 
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">САША</h5>
+                            <p class="card-text">Преподаватель по Java<br>
+                                опыт коммерческой разработки 5+ лет</p>
+                            <a href="#" class="btn btn-primary">telegram-online</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item2">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'my_site/image/teachers/teacher6.png' %}" class="d-block w-100" alt=""> 
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">АНАСТАСИЯ</h5>
+                            <p class="card-text">HR-специалист<br>
+                                опыт с сфере IT 4+ лет</p>
+                            <a href="#" class="btn btn-primary">telegram-online</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item2">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'my_site/image/teachers/teacher7.png' %}" class="d-block w-100" alt=""> 
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">МАКСИМ</h5>
+                            <p class="card-text">Преподаватель по Python<br>
+                                опыт коммерческой разработки 2 года<br>
+                                опыт в QA 1 год</p>
+                            <a href="#" class="btn btn-primary">telegram-online</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item2">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'my_site/image/teachers/teacher8.png' %}" class="d-block w-100" alt=""> 
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">ОЛЕГ</h5>
+                            <p class="card-text">Преподаватель по Python<br>
+                                опыт коммерческой разработки 3 года</p>
+                            <a href="#" class="btn btn-primary">telegram-online</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item2">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'my_site/image/teachers/teacher9.png' %}" class="d-block w-100" alt=""> 
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">АНГЕЛИНА</h5>
+                            <p class="card-text">Преподаватель по Python<br>
+                                опыт коммерческой разработки 2+ года</p>
+                            <a href="#" class="btn btn-primary">telegram-online</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item2">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'my_site/image/teachers/teacher10.png' %}" class="d-block w-100" alt=""> 
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">МАРИЯ</h5>
+                            <p class="card-text">Преподаватель по Python<br>
+                                опыт коммерческой разработки 4+ лет</p>
+                            <a href="#" class="btn btn-primary">telegram-online</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item2">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'my_site/image/teachers/teacher11.png' %}" class="d-block w-100" alt=""> 
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">ЕКАТЕРИНА</h5>
+                            <p class="card-text">Преподаватель веб-дизайну<br>
+                                опыт коммерческой разработки 1+ год</p>
+                            <a href="#" class="btn btn-primary">telegram-online</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item2">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'my_site/image/main.png' %}" class="d-block w-100" alt=""> 
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">ЭДВАРД</h5>
+                            <p class="card-text">Топовый преподаватель<br>
+                                огромный опыт коммерческой разработки</p>
+                            <a href="#" class="btn btn-primary">telegram-online</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"  data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"  data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden"></span>
+            </button>
+        </div>
+    </div> {% endcomment %}
+    <div class="swiper-custom">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'my_site/image/teachers/teacher1.png' %}" class="d-block w-100" alt=""> 
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">АРТУР</h5>
+                            <p class="card-text">Преподаватель по Python<br>
+                                опыт коммерческой разработки 3+ лет</p>
+                            {% comment %} <a href="#" class="btn btn-primary">telegram-online</a> {% endcomment %}
+                            <p>
+                                <a href="https://web.telegram.org/z/" target="_blank"><i class="fa fa-telegram" aria-hidden="true" title="telegram"></i></a>
+                                <a href="https://ru-ru.facebook.com/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true" title="facebook"></i></a>
+                                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true" title="instagram"></i></a>
+                                <a href="https://www.whatsapp.com/" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true" title="whatsapp"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'my_site/image/teachers/teacher2.png' %}" class="d-block w-100" alt=""> 
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">ДЕНИС</h5>
+                            <p class="card-text">Преподаватель по Python<br>
+                                опыт коммерческой разработки 3+ лет</p>
+                            <a href="#" class="btn btn-primary">telegram-online</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'my_site/image/teachers/teacher3.png' %}" class="d-block w-100" alt=""> 
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">ЕВГЕНИЙ</h5>
+                            <p class="card-text">Преподаватель по Python<br>
+                                опыт коммерческой разработки 8+ лет</p>
+                            <a href="#" class="btn btn-primary">telegram-online</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'my_site/image/teachers/teacher4.png' %}" class="d-block w-100" alt=""> 
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">ВЛАДИСЛАВ</h5>
+                            <p class="card-text">Преподаватель по Python<br>
+                                опыт коммерческой разработки 4+ лет</p>
+                            <a href="#" class="btn btn-primary">telegram-online</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'my_site/image/teachers/teacher5.png' %}" class="d-block w-100" alt=""> 
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">САША</h5>
+                            <p class="card-text">Преподаватель по Java<br>
+                                опыт коммерческой разработки 5+ лет</p>
+                            <a href="#" class="btn btn-primary">telegram-online</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'my_site/image/teachers/teacher6.png' %}" class="d-block w-100" alt=""> 
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">АНАСТАСИЯ</h5>
+                            <p class="card-text">HR-специалист<br>
+                                опыт с сфере IT 4+ лет</p>
+                            <a href="#" class="btn btn-primary">telegram-online</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'my_site/image/teachers/teacher7.png' %}" class="d-block w-100" alt=""> 
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">МАКСИМ</h5>
+                            <p class="card-text">Преподаватель по Python<br>
+                                опыт коммерческой разработки 2 года<br>
+                                опыт в QA 1 год</p>
+                            <a href="#" class="btn btn-primary">telegram-online</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'my_site/image/teachers/teacher8.png' %}" class="d-block w-100" alt=""> 
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">ОЛЕГ</h5>
+                            <p class="card-text">Преподаватель по Python<br>
+                                опыт коммерческой разработки 3 года</p>
+                            <a href="#" class="btn btn-primary">telegram-online</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'my_site/image/teachers/teacher9.png' %}" class="d-block w-100" alt=""> 
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">АНГЕЛИНА</h5>
+                            <p class="card-text">Преподаватель по Python<br>
+                                опыт коммерческой разработки 2+ года</p>
+                            <a href="#" class="btn btn-primary">telegram-online</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'my_site/image/teachers/teacher10.png' %}" class="d-block w-100" alt=""> 
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">МАРИЯ</h5>
+                            <p class="card-text">Преподаватель по Python<br>
+                                опыт коммерческой разработки 4+ лет</p>
+                            <a href="#" class="btn btn-primary">telegram-online</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'my_site/image/teachers/teacher11.png' %}" class="d-block w-100" alt=""> 
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">ЕКАТЕРИНА</h5>
+                            <p class="card-text">Преподаватель веб-дизайну<br>
+                                опыт коммерческой разработки 1+ год</p>
+                            <a href="#" class="btn btn-primary">telegram-online</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'my_site/image/main.png' %}" class="d-block w-100" alt=""> 
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">ЭДВАРД</h5>
+                            <p class="card-text">Топовый преподаватель<br>
+                                огромный опыт коммерческой разработки</p>
+                            <a href="#" class="btn btn-primary">telegram-online</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+</section>
+<section>
+    <div class="container_spoiler">
+        <div class="row title_row">
+            <p class="spoiler_title"><b>Отвечаем на часто задаваемые вопросы:</b></p>
+        </div>
+    </div>
+    <div class="wrapper_spoiler">
+        <div class="block_spoiler">
+            <div class="block_spoiler_item">
+                <input class="block_input" type="checkbox" id="block_spoiler_1">
+                <label class="block_spoiler_title" for="block_spoiler_1">Кто мы и почему стоит пройти курс именно у нас?</label>
+                <div class="block_spoiler_text">
+                    Наше IT-обучение помогло уже 1000+ ученикам трудоустроиться в лучшие IT-компании и начать зарабатывать на фрилансе.
+                    Мы предлагаем курсы программирования в Минске, на которых наши студенты:
+                    изучают самую актуальную теорию по тем темам, которые требуют для трудоустройства топовые IT-компании;
+                    закрепляют знания на практике (каждая задача основывается на реальных кейсах);
+                    общаются с практикующими разработчиками-преподавателями;
+                    нарабатывают портфолио уже с первой недели обучения;
+                    узнают все секреты трудоустройства.
+                </div>
+            </div>
+            <div class="block_spoiler_item">
+                <input class="block_input" type="checkbox" id="block_spoiler_2">
+                <label class="block_spoiler_title" for="block_spoiler_2">Какие преимущества у нас по сравнению с другими IT-курсами?</label>
+                <div class="block_spoiler_text">
+                    На курсе python мы предлагаем индивидуальное обучение python с нуля, в ходе которого прокачаем Ваши hard и soft skills и будем сопровождать Вас до самого трудоустройства!
+                    По окончании курса python для начинающих Вы получите наработанное портфолио, сертификаты на русском и английском языках, сопроводительное письмо и грамотное резюме, составленное совместно с профессионалами.
+                    Онлайн курс питон THE WAY PYTHON поможет Вам практиковаться на реальных IT-проектах, оформить профессиональный аккаунт на LinkedIn и GitHub. Мы подберём для Вас наши компании-партнёры для трудоустройства и проведём консультации с HR-специалистом.
+                    Учиться можно в комфортном темпе и удобное время! Менеджеры и преподаватели в любом случае будут на связи 24/7.
+                </div>
+            </div>
+            <div class="block_spoiler_item">
+                <input class="block_input" type="checkbox" id="block_spoiler_3">
+                <label class="block_spoiler_title" for="block_spoiler_3">Какие курсы можно пройти у нас?</label>
+                <div class="block_spoiler_text">
+                    Наша айти школа предлагает обучение в сфере it по самым востребованным направлениям – Python, Java, Frontend и веб-дизайн. Python – самый популярный и простой в изучении язык. Для Java предлагают самые высокие зарплаты.
+                    Курсы программирования с нуля по Python, Frontend и дизайну проходят 96 академических часов, то есть 4 месяца. 1 занятие = 3 академических часа. Курс Java длится 6 месяцев.
+                </div>
+            </div>
+            <div class="block_spoiler_item">
+                <input class="block_input" type="checkbox" id="block_spoiler_4">
+                <label class="block_spoiler_title" for="block_spoiler_4">Сколько длится обучение в нашей IT-школе?</label>
+                <div class="block_spoiler_text">
+                    Курсы программирования с нуля по Python, Frontend и дизайну проходят 96 академических часов, то есть 4 месяца. 1 занятие = 3 академических часа. Курс Java длится 6 месяцев.
+                </div>
+            </div>
+            <div class="block_spoiler_item">
+                <input class="block_input" type="checkbox" id="block_spoiler_5">
+                <label class="block_spoiler_title" for="block_spoiler_5">В каком формате проходит обучение?</label>
+                <div class="block_spoiler_text">
+                    Мы предлагаем обучение в 3 форматах:
+                    оффлайн занятия в комфортных кабинетах – чай, кофе, снеки, группы до 15 человек, прямой контакт с преподавателем;
+                    онлайн уроки – общение с ментором в реальном времени прямо из Вашего дома;
+                    индивидуальное обучение – идеальная возможность учиться в любое время, в любом месте и в любом темпе.
+                </div>
+            </div>
+            <div class="block_spoiler_item">
+                <input class="block_input" type="checkbox" id="block_spoiler_6">
+                <label class="block_spoiler_title" for="block_spoiler_6">Как узнать, какое направление подойдет именно Вам?</label>
+                <div class="block_spoiler_text">
+                    На нашем бесплатном занятии мы подробно рассказываем о направлениях в IT, перспективах и способах трудоустройства с нуля. Занятие проходит как в онлайн, так и в офлайн форматах.
+                    В программу курсов входит блок уроков с HR-ами, которые рассказывают все секреты старта в IT – составление резюме, сопроводительных писем, оформление портфолио, профилей в социальных сетях, сообщения рекрутерам, soft skills. Кроме того, выпускники курсов могут попасть на стажировку в наш отдел разработки или к компаниям-партнёрам.
+                </div>
+            </div>
+            <div class="block_spoiler_item">
+                <input class="block_input" type="checkbox" id="block_spoiler_7">
+                <label class="block_spoiler_title" for="block_spoiler_7">Как происходит оплата за курсы?</label>
+                <div class="block_spoiler_text">
+                    На все программы действует беспроцентная рассрочка от 2 до 24 месяцев. Вы сможете спланировать бюджет, разбив сумму на небольшие платежи.
+                </div>
+            </div>
+            <div class="block_spoiler_item">
+                <input class="block_input" type="checkbox" id="block_spoiler_8">
+                <label class="block_spoiler_title" for="block_spoiler_8">Как мы помогаем с трудоустройством?</label>
+                <div class="block_spoiler_text">
+                    Как лучшая школа айти мы предлагаем обучение от опытного HR-специалиста, который делится секретами для старта карьеры в IT и проводит тренировочные собеседования. Мы помогаем составить резюме, портфолио и сопроводительное письмо, которое покорит сердце любого рекрутера. Выпускники курсов программирования с нуля также могут стажироваться в наших компаниях-партнёрах.
+                </div>
+            </div>
+            <div class="block_spoiler_item">
+                <input class="block_input" type="checkbox" id="block_spoiler_9">
+                <label class="block_spoiler_title" for="block_spoiler_9">Как получить консультацию?</label>
+                <div class="block_spoiler_text">
+                    Запишитесь на наше бесплатное занятие, где Вы получите подробную консультацию по курсам, составите пошаговый план карьеры в IT и узнаете все секреты обучения программированию с нуля.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="gallery">
+    <div class="container_gallery">
+        <div class="row title_row">
+            <h2 class="teacher_title"><b>Наша деятельность</b></h2>
+            <p>С нами вы в 2 раза быстрее вольетесь в сферу IT и обучение пойдет намного проще!</p>
+        </div>
+    </div>
+    <div class="row_gallery">
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-sm-4 col-6 trumb">
+                <a data-fancybox="gallery" href="{% static 'my_site/image/gallery/gallery1.jpg' %}">
+                <img src="{% static 'my_site/image/gallery/gallery1.jpg' %}"></a>
+            </div>
+            <div class="col-lg-3 col-sm-4 col-6 trumb">
+                <a data-fancybox="gallery" href="{% static 'my_site/image/gallery/gallery2.jpg' %}">
+                    <img src="{% static 'my_site/image/gallery/gallery2.jpg' %}"></a>    
+            </div>
+            <div class="col-lg-3 col-sm-4 col-6 trumb">
+                <a data-fancybox="gallery" href="{% static 'my_site/image/gallery/gallery3.jpg' %}">
+                    <img src="{% static 'my_site/image/gallery/gallery3.jpg' %}"></a>    
+            </div>
+            <div class="col-lg-3 col-sm-4 col-6 trumb">
+                <a data-fancybox="gallery" href="{% static 'my_site/image/gallery/gallery4.jpg' %}">
+                    <img src="{% static 'my_site/image/gallery/gallery4.jpg' %}"></a>    
+            </div>
+    </div>
+    <div class="row_gallery">
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-sm-4 col-6 trumb">
+                <a data-fancybox="gallery" href="{% static 'my_site/image/gallery/gallery5.jpg' %}">
+                <img src="{% static 'my_site/image/gallery/gallery5.jpg' %}"></a>
+            </div>
+            <div class="col-lg-3 col-sm-4 col-6 trumb">
+                <a data-fancybox="gallery" href="{% static 'my_site/image/gallery/gallery6.jpg' %}">
+                    <img src="{% static 'my_site/image/gallery/gallery6.jpg' %}"></a>    
+            </div>
+            <div class="col-lg-3 col-sm-4 col-6 trumb">
+                <a data-fancybox="gallery" href="{% static 'my_site/image/gallery/gallery7.jpg' %}">
+                    <img src="{% static 'my_site/image/gallery/gallery7.jpg' %}"></a>    
+            </div>
+            <div class="col-lg-3 col-sm-4 col-6 trumb">
+                <a data-fancybox="gallery" href="{% static 'my_site/image/gallery/gallery8.jpg' %}">
+                    <img src="{% static 'my_site/image/gallery/gallery8.jpg' %}"></a>    
+            </div>
+    </div>
+    <div class="row_gallery">
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-sm-4 col-6 trumb">
+                <a data-fancybox="gallery" href="{% static 'my_site/image/gallery/gallery9.jpg' %}">
+                <img src="{% static 'my_site/image/gallery/gallery9.jpg' %}"></a>
+            </div>
+            <div class="col-lg-3 col-sm-4 col-6 trumb">
+                <a data-fancybox="gallery" href="{% static 'my_site/image/gallery/gallery10.jpg' %}">
+                    <img src="{% static 'my_site/image/gallery/gallery10.jpg' %}"></a>    
+            </div>
+            <div class="col-lg-3 col-sm-4 col-6 trumb">
+                <a data-fancybox="gallery" href="{% static 'my_site/image/gallery/gallery11.jpg' %}">
+                    <img src="{% static 'my_site/image/gallery/gallery11.jpg' %}"></a>    
+            </div>
+            <div class="col-lg-3 col-sm-4 col-6 trumb">
+                <a data-fancybox="gallery" href="{% static 'my_site/image/gallery/gallery12.jpg' %}">
+                    <img src="{% static 'my_site/image/gallery/gallery12.jpg' %}"></a>    
+            </div>
+        </div>
+    </div>
+    <div class="row_gallery">
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-sm-4 col-6 trumb">
+                <a data-fancybox="gallery" href="{% static 'my_site/image/gallery/gallery13.jpg' %}">
+                <img src="{% static 'my_site/image/gallery/gallery13.jpg' %}"></a>
+            </div>
+            <div class="col-lg-3 col-sm-4 col-6 trumb">
+                <a data-fancybox="gallery" href="{% static 'my_site/image/gallery/gallery14.jpg' %}">
+                    <img src="{% static 'my_site/image/gallery/gallery14.jpg' %}"></a>    
+            </div>
+            <div class="col-lg-3 col-sm-4 col-6 trumb">
+                <a data-fancybox="gallery" href="{% static 'my_site/image/gallery/gallery15.jpg' %}">
+                    <img src="{% static 'my_site/image/gallery/gallery15.jpg' %}"></a>    
+            </div>
+            <div class="col-lg-3 col-sm-4 col-6 trumb">
+                <a data-fancybox="gallery" href="{% static 'my_site/image/gallery/gallery16.jpg' %}">
+                    <img src="{% static 'my_site/image/gallery/gallery16.jpg' %}"></a>    
+            </div>
+        </div>
+    </div>
+    <div class="row_gallery">
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-sm-4 col-6 trumb">
+                <a data-fancybox="gallery" href="{% static 'my_site/image/gallery/gallery17.jpg' %}">
+                <img src="{% static 'my_site/image/gallery/gallery17.jpg' %}"></a>
+            </div>
+            <div class="col-lg-3 col-sm-4 col-6 trumb">
+                <a data-fancybox="gallery" href="{% static 'my_site/image/gallery/gallery18.jpg' %}">
+                    <img src="{% static 'my_site/image/gallery/gallery18.jpg' %}"></a>    
+            </div>
+            <div class="col-lg-3 col-sm-4 col-6 trumb">
+                <a data-fancybox="gallery" href="{% static 'my_site/image/gallery/gallery19.jpg' %}">
+                    <img src="{% static 'my_site/image/gallery/gallery19.jpg' %}"></a>    
+            </div>
+            <div class="col-lg-3 col-sm-4 col-6 trumb">
+                <a data-fancybox="gallery" href="{% static 'my_site/image/gallery/gallery20.jpg' %}">
+                    <img src="{% static 'my_site/image/gallery/gallery20.jpg' %}"></a>    
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<section id="slogan">
+    <div class="container">
+        <div class="row title_row">
+            <p>Поспеши!!! Осталось мало мест!!! Предложение ограничено!!! Зарегистрируйся и получи доступ к индивидуальному обучению прямо сейчас со скидкой в 50%!!!</p>
+        </div>
+    </div>
+    <p class="slogan-img_free"><img src="{% static 'my_site/image/free.png' %}" alt="">
+        <a href="{% url 'validation' %}"><button class="free_btn free_free"><b>ЗАПИСАТЬСЯ</b></button></a>
+    </p>
+</section>{% endblock %}
+{% block script %} <script src="{% static 'my_site/js/wow.min.js' %}"></script>
+<script>
+    new WOW().init()
+</script>
+<script>
+    function show (state) {
+        document.getElementById('wrapper_form_invisible').style.display=state;
+        document.getElementById('font_gray').style.display=state;
+    }
+</script>
+<script>let swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    slidesPerGroup: 4,
+    loop: false,
+    loopFillGroupWithBlank: true,
+    breakpoints: {
+        1200: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        },
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 5,
+        },
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 5,
+        },
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+});</script>{% endblock %}
